@@ -1,0 +1,22 @@
+export atangle.iot.entity.ProductAttr
+->package atangle.iot.entity.dto
+
+specification ProductAttrPage {
+  like(name)
+  eq(code)
+    flat(product){
+        id as productId
+    }
+}
+
+input ProductAttrInput {
+    name
+    code
+    flat(product){
+        id as productId
+    }
+    unit,
+    readType,
+    attrType
+
+}

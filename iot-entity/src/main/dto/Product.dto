@@ -1,0 +1,18 @@
+export atangle.iot.entity.Product
+        -> package atangle.iot.entity.dto
+import org.atangle.framework.inter.WithId
+
+specification ProductPage{
+        eq(code)
+        like(name)
+        eq(productType)
+}
+
+input ProductInput{
+        code
+        name
+        liveTime
+        productType
+        accessKey
+        secretKey
+}

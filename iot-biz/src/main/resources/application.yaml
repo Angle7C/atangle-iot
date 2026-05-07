@@ -1,0 +1,52 @@
+
+spring:
+  application:
+    name: iot
+  config:
+    import:
+      - nacos:application-base.yaml?group=DEFAULT_GROUP
+      - nacos:application-${spring.application.name}.yaml?group=DEFAULT_GROUP
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        namespace: ${spring.profiles.active}
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: ${spring.profiles.active}
+        group: "DEFAULT_GROUP"
+        watch:
+          enabled: true
+  datasource:
+    driver-class-name: org.postgresql.Driver  # 改为 PostgreSQL 驱动
+    url: jdbc:postgresql://127.0.0.1:5432/postgres?currentSchema=angle  # PostgreSQL 默认端口是 5432
+    username: postgres
+    password: 123456
+
+  flyway:
+    baseline-on-migrate: true
+jimmer:
+  show-sql: true
+  dialect: org.babyfish.jimmer.sql.dialect.PostgresDialect
+  client:
+    openapi:
+      path: "/jimmer/open.yaml"
+      ui-path: "/jimmer/open.html"
+      properties:
+        info:
+          terms-of-service:
+    ts:
+      path: "/jimmer/ts.zip"
+  pretty-sql: true
+auth-config:
+  ignore-urls: []
+#server:
+#  servlet:
+#    encoding:
+#      charset: utf-8
+#      force: true
+#  tomcat:
+#    uri-encoding: UTF-8
+server:
+  port: 8020

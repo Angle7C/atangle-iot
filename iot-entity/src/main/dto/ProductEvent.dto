@@ -1,0 +1,21 @@
+export atangle.iot.entity.ProductEvent
+->package atangle.iot.entity.dto
+
+specification ProductEventPage {
+  like(name)
+  eq(code)
+  eq(eventType)
+  flat(product) {
+    id as productId
+  }
+}
+
+input ProductEventInput {
+  name
+  code
+  flat(product) {
+    id as productId
+  }
+  remark
+  eventType
+}

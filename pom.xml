@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>atangle</groupId>
+    <artifactId>iot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>iot</name>
+    <description>atangle-iot</description>
+    <modules>
+        <module>iot-biz</module>
+        <module>iot-api</module>
+        <module>iot-entity</module>
+    </modules>
+    <packaging>pom</packaging>
+    <url/>
+    <licenses>
+        <license/>
+    </licenses>
+    <developers>
+        <developer/>
+    </developers>
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+    <properties>
+        <jimmer.version>0.9.110</jimmer.version>
+        <lombok.version>1.18.24</lombok.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.atangle</groupId>
+                <artifactId>dependencies</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

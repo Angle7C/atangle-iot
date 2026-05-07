@@ -1,0 +1,21 @@
+export atangle.iot.entity.ProductService
+->package atangle.iot.entity.dto
+
+specification ProductServicePage {
+  like(name)
+  eq(code)
+  flat(product) {
+    id as productId
+  }
+}
+
+input ProductServiceInput {
+  name
+  code
+  flat(product) {
+    id as productId
+  }
+  result
+  remark
+  async
+}
