@@ -32,4 +32,7 @@ public interface Product extends BaseEntity {
 
     @OneToMany(mappedBy = "product")
     List< ProductService> services();
+
+    @OneToMany(mappedBy = "product")
+    List<Device> devices();
 }
