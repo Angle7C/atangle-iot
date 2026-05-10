@@ -23,6 +23,16 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>3.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taosdata.jdbc</groupId>
+            <artifactId>taos-jdbcdriver</artifactId>
+            <version>3.8.3</version>
+        </dependency>
+        <dependency>
             <groupId>atangle</groupId>
             <artifactId>system-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>

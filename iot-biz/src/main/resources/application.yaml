@@ -50,3 +50,11 @@ auth-config:
 #    uri-encoding: UTF-8
 server:
   port: 8020
+
+tdengine:
+  datasource:
+    enabled: false
+    driver-class-name: com.taosdata.jdbc.rs.RestfulDriver
+    url: jdbc:TAOS-RS://127.0.0.1:6041/test
+    username: root
+    password: taosdata
